@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+<meta name="theme-color" content="#eef1f7">
+<title>霓虹街头 · NEON CLASH</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="wrap">
+  <header class="topbar">
+    <div class="brand">
+      <span class="dot"></span>
+      <h1>NEON CLASH</h1>
+      <span class="sub">霓虹街头 · 2D 格斗</span>
+    </div>
+    <div class="tools">
+      <button id="btnSound" class="tool" title="音效开关">🔊 音效</button>
+      <button id="btnFull" class="tool" title="全屏">⛶ 全屏</button>
+    </div>
+  </header>
+
+  <main class="stage" id="stage">
+    <canvas id="game" width="1280" height="720"></canvas>
+
+    <div class="touch" id="touch" aria-hidden="true">
+      <div class="pad pad-l">
+        <button data-key="KeyA" class="tb">◀</button>
+        <button data-key="KeyD" class="tb">▶</button>
+        <button data-key="KeyW" class="tb tb-s">跳</button>
+      </div>
+      <div class="pad pad-r">
+        <button data-key="KeyS" class="tb tb-s">挡</button>
+        <button data-key="KeyJ" class="tb tb-p">拳</button>
+        <button data-key="KeyK" class="tb tb-k">踢</button>
+        <button data-key="KeyL" class="tb tb-x">必杀</button>
+      </div>
+    </div>
+  </main>
+
+  <footer class="legend">
+    <div class="lg">
+      <b class="p1">P1</b>
+      <span><kbd>A</kbd><kbd>D</kbd>移动</span>
+      <span><kbd>W</kbd>跳</span>
+      <span><kbd>S</kbd>格挡</span>
+      <span><kbd>J</kbd>拳</span>
+      <span><kbd>K</kbd>踢</span>
+      <span><kbd>L</kbd>必杀</span>
+    </div>
+    <div class="lg">
+      <b class="p2">P2</b>
+      <span><kbd>←</kbd><kbd>→</kbd>移动</span>
+      <span><kbd>↑</kbd>跳</span>
+      <span><kbd>↓</kbd>格挡</span>
+      <span><kbd>,</kbd>拳</span>
+      <span><kbd>.</kbd>踢</span>
+      <span><kbd>/</kbd>必杀</span>
+    </div>
+    <div class="lg tip">
+      <span><kbd>Enter</kbd>开始</span>
+      <span><kbd>R</kbd>重开</span>
+      <span><kbd>Esc</kbd>暂停</span>
+    </div>
+  </footer>
+</div>
+
+<script src="game.js"></script>
+</body>
+</html>
